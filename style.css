@@ -1,0 +1,306 @@
+@font-face {
+    font-family: 'Public Sans';
+    src: url('fonts/PublicSans-VariableFont_wght.ttf')
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Public Sans';
+    font-size: 18px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+.container{
+    width: 100dvw;
+    background:hsl(0, 0%, 98%);
+}
+nav{
+    width: 100dvw;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 1% 0%;
+    justify-content: space-around;
+    background: hsl(0, 0%, 100%);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.logo{
+    width: 139px;
+    height: 20px;
+}
+.nav-links ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 20px;
+    height: 100%;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: hsl(233, 8%, 62%);
+    position: relative;
+    transition: color 0.3s;
+}
+.nav-links ul li a::before{
+    content: '';
+    background-image: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    border-radius: 20px;
+    bottom: -130%;
+    transition: width 0.4s;
+}
+.nav-links ul li a:hover{
+    color: hsl(233, 26%, 24%);
+}
+.nav-links ul li a:hover::before{
+    width: 100%;
+}
+
+.btn{
+    background-image: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    padding: 0.8% 2.2%;
+    border-radius: 50px;
+    position: relative;
+    transition: 0.3s;
+}
+.btn::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background: #ffffff3f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.btn:hover::before{
+    display: block;
+    cursor: pointer;
+}
+/* ------------------intro-section----------------- */
+.intro{
+    
+    background-image: url('images/bg-intro-desktop.svg');
+    background-size: 1500px;
+    background-position: top;
+    background-position-x: top;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 15% 10%;
+    width: 100%;
+}
+.intro-left{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+.intro-left h1{
+    font-size: 60px;
+    font-weight: 300;
+    color: hsl(233, 26%, 24%);
+}
+.intro-left p{
+    color: hsl(233, 8%, 62%);
+    width: 79%;
+    line-height: 25px;
+}
+.body-btn{
+    background-image: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    padding: 15px 40px;
+    border-radius: 30px;
+    position: relative;
+    transition: 0.3s;
+}
+.body-btn::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: #ffffff3f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.body-btn:hover::before{
+    display: block;
+    cursor: pointer;
+}
+.intro-right{
+    position: relative;
+    flex-basis: 50%;
+}
+.intro-right img{
+    width: 100%;
+    position: absolute;
+    top: -300px;
+    right: -100px;
+}
+
+/* --------------------about--------------------- */
+
+.about{
+    background: hsl(220, 16%, 96%);
+    padding: 10%;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.top h1{
+    font-size: 50px;
+    font-weight: 300;
+    color: hsl(233, 26%, 24%);
+}
+.top p{
+    color: hsl(233, 8%, 62%);
+    width: 65%;
+    line-height: 25px;
+}
+.bottom{
+    display: flex;
+    gap: 2%;
+    margin-top: 6%;
+}
+.bottom div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+.bottom div h2{
+    font-size: 25px;
+    font-weight: 300;
+}
+.bottom div p{
+    color: hsl(233, 8%, 62%);
+    text-align: start;
+    letter-spacing: 0.3px;
+    line-height: 25px;
+}
+
+/* -----------------------------articles-------------------------------- */
+
+.articles{
+    padding: 10%;
+}
+.articles h1{
+    font-size: 50px;
+    font-weight: 300;
+    color: hsl(233, 26%, 24%);
+}
+.gallery{
+    display: flex;
+    gap: 2%;
+    width: 100%;
+    margin-top: 6%;
+}
+.gallery div{
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.gallery div img{
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.content{
+    background: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 10% 0%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.content p{
+    color: hsl(233, 8%, 62%);
+    width: 85%;
+    font-size: 14.05px;
+    margin: 0% 10% 0% 10%;
+}
+.content h3{
+    font-size: 20px;
+    font-weight: 300;
+    color: hsl(233, 26%, 24%);
+    margin: 0% 10%;
+    transition: color 0.3s;
+}
+.content h3:hover{
+    color: hsl(136, 65%, 51%);
+    cursor: pointer;
+}
+
+/* -----------------------footer-------------------------- */
+
+.footer{
+    background: hsl(233, 26%, 24%);
+    display: flex;
+    padding: 4% 10%;
+    justify-content: space-between;
+    height: 10dvh;
+}
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    gap: 40%;
+}
+.icons{
+    display: flex;
+    gap: 10%;
+}
+.icons i{
+    color: hsl(0, 0%, 100%);
+    font-size: 20px;
+    transition: color 0.3s;
+}
+.icons i:hover{
+    color: hsl(136, 65%, 51%);
+    cursor: pointer;
+}
+.footer-middle{
+    display: flex;
+    gap: 10rem;
+}
+.footer-middle div{
+    display: flex;
+    flex-direction: column;
+    gap: 25%;
+}
+.footer-middle div p{
+    color: hsl(233, 8%, 62%);
+    transition: color 0.3s;
+}
+.footer-middle div p:hover{
+    color: hsl(136, 65%, 51%);
+    cursor: pointer;
+}
+.footer-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 40%;
+}
+.footer-right p{
+    color: hsl(233, 8%, 62%);
+}
