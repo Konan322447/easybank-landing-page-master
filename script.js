@@ -10,9 +10,11 @@ navToggle.addEventListener('click', ()=>{
     if (btn === 'images/icon-hamburger.svg') {
         navToggle.setAttribute('src', 'images/icon-close.svg');
         navBody.style.display = 'flex';
+        document.body.style.overflow = 'hidden'
     }else{
         navToggle.setAttribute('src', 'images/icon-hamburger.svg');
         navBody.style.display = 'none'
+        document.body.style.overflow = 'auto'
     }
 
 })
